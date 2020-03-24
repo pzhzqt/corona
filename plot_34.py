@@ -13,9 +13,9 @@ def res(param, x, y):
     return fun(param, x) - y
 
 if __name__ == "__main__":
-    df = read_csv('data.csv')
+    df = read_csv('data.csv').query('day<35')
     x0_low = np.array([2.00000020e+05, 3.86868186e-01, 4.17216896e+01])
-    x0_high = np.array([4.00000020e+06, 2.86868186e-01, 5.17216896e+01])
+    x0_high = np.array([4.370000020e+06, 2.86868186e-01, 5.17216896e+01])
     inp = [x0_low, x0_high]
 
     for i in range(2):
@@ -46,4 +46,4 @@ if __name__ == "__main__":
         plt.plot(Xrange, np.array(ypred), '-')
 
         plt.tight_layout(pad=2.0)
-        pl.savefig(f'corona_{i}.png')
+        pl.savefig(f'corona_init_{i}.png')
