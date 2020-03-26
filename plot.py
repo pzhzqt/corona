@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
         for day in range(10, 190, 10):
             print(f'{day}: {fun(res_robust.x, day)}')
-        Xrange = np.arange(0,39.1,0.1)
+        Xrange = np.arange(0,41.1,0.1)
         ypred = []
         for x in Xrange:
             ypred.append(fun(res_robust.x, x))
